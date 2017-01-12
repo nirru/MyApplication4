@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Marked fields are mandatory"
+                android:textColor="#FFEE2922"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FF6C5F5F"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
+            <LinearLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookname"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Book Name *"
+                                android:inputType="text"
+                                android:textSize="14sp"
+                                android:paddingBottom="2dp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookdescription"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Book Description"
+                                android:inputType="text"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Choose your book category"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            android:textColor="#FF4E4949"/>
+                        <Spinner
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:id="@+id/ucategory"
+                            android:layout_marginLeft="10dp">
+
+                        </Spinner>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/ubookpublication"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Book Publication"
+                                android:inputType="text"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookIsbno."
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:textSize="14sp"
+                                android:gravity="center_vertical"
+                                android:hint="Enter 10/13 digit ISBN no *"
+                                android:inputType="number"
+                                android:paddingBottom="2dp"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookauthor"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Author Name *"
+                                android:inputType="text"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookedition"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Book Edition "
+                                android:inputType="text"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Choose book language"
+                            android:textSize="14sp"
+                            android:textColor="#FF4E4949"/>
+                        <RadioGroup
+                            android:id="@+id/ubooklanguage"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <RadioButton
+                                android:id="@+id/ubooklanguagehindi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hindi"
+                                android:checked="true"
+                                android:textSize="12sp"
+                                />
+                            <RadioButton
+                                android:id="@+id/ubooklanguageenglish"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="English"
+                                android:textSize="12sp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ubooklanguagetamil"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tamil"
+                                android:textSize="12sp"
+                                />
+                            <RadioButton
+                                android:id="@+id/ubooklanguagegujarati"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gujarati"
+                                android:textSize="12sp"
+                                />
+
+                        </RadioGroup>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookpages"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Total no of pages *"
+                                android:inputType="number"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookpublishingyear"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Publishing Year "
+                                android:inputType="date"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Book Binding"
+                            android:textSize="14sp"
+                            android:textColor="#FF4E4949"/>
+                        <RadioGroup
+                            android:id="@+id/ubookbinding"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <RadioButton
+                                android:id="@+id/ubookbindinghard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hard back"
+                                android:checked="true"
+                                android:textSize="12sp"
+
+                                />
+                            <RadioButton
+                                android:id="@+id/ubookbindingpager"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Paper back"
+                                android:textSize="12sp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ubookbindingspireal"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Spiral bind"
+                                android:textSize="12sp"
+                                />
+
+                        </RadioGroup>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/ubookprice1"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Book Price *"
+                                android:inputType="number"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Discount Offered on Book"
+                            android:textSize="14sp"
+                            android:textColor="#FF4E4949"/>
+                        <RadioGroup
+                            android:id="@+id/ubookdiscount"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <RadioButton
+                                android:id="@+id/ubookdiscount75"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="75%"
+                                android:checked="true"
+                                android:textSize="12sp"
+
+                                />
+                            <RadioButton
+                                android:id="@+id/ubookdiscount50"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="50%"
+                                android:textSize="12sp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ubookdiscountdonate"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Donate"
+                                android:textSize="12sp"
+                                />
+
+                        </RadioGroup>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book Status"
+                            android:textSize="14sp"
+                            android:textColor="#FF4E4949"/>
+                        <RadioGroup
+                            android:id="@+id/ubookstatus"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <RadioButton
+                                android:id="@+id/ubookstatusnow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Available now "
+                                android:checked="true"
+                                android:textSize="12sp"
+
+                                />
+                            <RadioButton
+                                android:id="@+id/ubookstatusshortly"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Available shortly"
+                                android:textSize="12sp"
+                                />
+
+
+                        </RadioGroup>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+                            <EditText
+                                android:id="@+id/ubookuploaddate"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:singleLine="true"
+                                android:textColor="#FF4E4949"
+                                android:textColorHint="#FFA79C9C"
+                                android:padding="8dp"
+                                android:gravity="center_vertical"
+                                android:hint="Enter Upload Date "
+                                android:inputType="number"
+                                android:paddingBottom="2dp"
+                                android:textSize="14sp"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/card_view"
+                                android:layout_width="125dp"
+                                android:layout_height="125dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                card_view:cardCornerRadius="2dp"
+                                android:layout_marginTop="20dp">
+                                <Button
+
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Front Book Images"
+                                    android:id="@+id/ubuttonchoose"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/ubookfrontimage"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    />
+                            </android.support.v7.widget.CardView>
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/card_view2"
+                                android:layout_width="125dp"
+                                android:layout_height="125dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                card_view:cardCornerRadius="2dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20sp">
+                                <Button
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Spine Book Images"
+                                    android:id="@+id/ubuttonspinechoose"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/ubookspineimage"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    />
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/card_view3"
+                                android:layout_width="125dp"
+                                android:layout_height="125dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                card_view:cardCornerRadius="2dp"
+                                android:layout_marginTop="20dp">
+                                <Button
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Table of content"
+                                    android:id="@+id/ubuttontableofcontent"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/ubooktableofcontent"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    />
+                            </android.support.v7.widget.CardView>
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/card_view4"
+                                android:layout_width="125dp"
+                                android:layout_height="125dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                card_view:cardCornerRadius="2dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp">
+                                <Button
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Back Book Images"
+                                    android:id="@+id/ubuttonback"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/ubookbackimage"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    />
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/buttonUpload"
+        android:background="#EF5350"
+        android:text="BOOK UPLOAD"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

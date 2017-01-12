@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="refer" type="id" />
+    <item name="list_row" type="id" />
+    <item name="frameContent" type="id" />
+</resources>
