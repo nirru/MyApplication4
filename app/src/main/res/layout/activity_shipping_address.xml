@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.shareads.user.myapplication.activity.Shipping_address">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/address_app"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Confirm Shipping Address"
+            android:textSize="18sp"
+            android:maxLines="5"
+            android:textStyle="bold"
+            android:scrollbars="vertical"
+            android:paddingLeft="20dp"
+            android:elevation="8dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dip"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:lines="1"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dip"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:lines="1"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/login_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dip"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/mobile"
+                android:inputType="text"
+                android:lines="1"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/login_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dip"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Address1"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="center|left|top"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/login_address_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dip"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Address2"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="center|left|top"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/home_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home Delivery charges Rs 50"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@color/Green"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="COD"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/paytm"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/paytm_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/change_address"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@color/Green"
+                    android:text="Change Address"
+                    android:layout_below="@+id/paytm"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textColor="@color/white"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

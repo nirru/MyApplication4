@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "928526108551",
+    "project_id": "firebase-shareads"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928526108551:android:9b537403cc3f9ff9",
+        "android_client_info": {
+          "package_name": "com.shareads.user.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928526108551-85ui5cgqtklvjs32frsh08ve5mtrpbh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shareads.user.myapplication",
+            "certificate_hash": "A4296626AA85F466E45A4C16A3087EB372599C4E"
+          }
+        },
+        {
+          "client_id": "928526108551-u0d9iaa9ap9dm3btq92ld13nj9bfkudn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLM2NO3lQAfGeEPodlNC_InydHIhzj4h0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

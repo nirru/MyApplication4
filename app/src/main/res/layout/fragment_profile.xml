@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.shareads.user.myapplication.fragment.profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/red">
+
+        <ListView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/edit_layout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Details"
+                        android:textSize="18sp"
+                        android:paddingLeft="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"/>
+                    <ImageButton
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/edit"
+                        android:id="@+id/editdetail"
+                        android:layout_marginLeft="170dp"
+                        android:paddingLeft="20dp"
+                        android:layout_marginTop="10dp"/>
+
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    cardCornerRadius="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="20dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/mail_app"
+                                android:layout_marginLeft="10dp"
+                                android:paddingLeft="20dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="demo@gmail.com"
+                                android:id="@+id/pemail"
+                                android:textSize="16sp"
+                                android:maxLines="5"
+                                android:scrollbars="vertical"
+                                android:paddingLeft="20dp"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/address_app"
+                                android:layout_marginLeft="10dp"
+                                android:paddingLeft="20dp"/>
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Vijay Path, Mansarovar,Jaipur"
+                                android:id="@+id/paddress"
+                                android:textSize="16sp"
+                                android:maxLines="10"
+                                android:scrollbars="vertical"
+                                android:paddingLeft="20dp"
+                                android:elevation="8dp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/phone_app"
+                                android:layout_marginLeft="10dp"
+                                />
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="+91-123456789"
+                                android:id="@+id/pmobile"
+                                android:textSize="16sp"
+                                android:maxLines="5"
+                                android:scrollbars="vertical"
+                                android:paddingLeft="20dp"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="60dp"
+                    android:paddingTop="20dp"
+                    android:weightSum="1"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        cardCornerRadius="2dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/password_app"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text="Change Password"
+                                android:textColor="@color/red"
+                                android:id="@+id/pchangepassword"
+                                android:textSize="16sp"
+                                android:maxLines="5"
+                                android:scrollbars="vertical"
+                                android:paddingLeft="20dp"
+                                />
+
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/contactus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:layout_marginLeft="10dp"
+                        android:text="Contact US"
+                        android:autoLink="email"
+                        android:textColor="@color/red"
+                        android:scrollbars="vertical"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>
